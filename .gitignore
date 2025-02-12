@@ -1,0 +1,15 @@
+.DS_Store
+__init__.py
+__pycache__/
+application_downgrade.html
+billing.md
+bin/
+books/
+critical/
+fastapi/
+include/
+lib/
+pyvenv.cfg
+share/
+sql/
+temp/
