@@ -12,10 +12,4 @@ lib/
 pyvenv.cfg
 share/
 sql/
-suryan.md
-suryan.py
-suryan.sh
 temp/
-trash.json
-trash.md
-trash.py
