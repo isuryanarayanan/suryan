@@ -315,3 +315,5 @@ When a client purchases a downgrade for an application, the client will receive 
 
 - Downgrade scheduled `client_app_downgrade_scheduled`
 - Downgrade successful `client_app_downgrade_success`
+
+# Default notifications
