@@ -5,8 +5,7 @@
     - [ ] Fixing the notification configuration
     - [ ] Updating the templates according to the relevant scenario
       - [ ] Show amount with GST in the email
-    - [ ] Default notifications should not fail if the deduction is not successful
-      - [ ] Check with Aayush if the deduction should happen at all for default notifications
+    - [x] Skip deduction for default messages
   - [ ] Code cleanup
   - [ ] Endpoint updates `apps/` to `apps/master`
   - [ ] Move the config used by `shipping_badges` app to a dedicated file
@@ -290,8 +289,8 @@ When a client deactivates an application, the client will receive a notification
 
 This operation can be done by the client or by the system. So the template has 2 scenarios:
 
-- Client deactivation `client_app_deactivate_success` (When the client turns of the recurring payment)
-- System deactivation `client_app_wiq_deactivate_success` (When the system deactivates the application)
+- Client deactivation `client_app_deactivation_success` (When the client turns of the recurring payment)
+- System deactivation `client_app_wiq_deactivation_success` (When the system deactivates the application)
 
 In the email template the messaging should signify how the deactivation was done. If the deactivation was done by the client, the email should say that the client has deactivated the application. If the deactivation was done by the system, the email should say that the application has been deactivated by the system.
 
