@@ -296,9 +296,8 @@ In the email template the messaging should signify how the deactivation was done
 
 3. Renewal
 
-When a client renews an application, the client will receive a notification that the application has been renewed. This operation can be done by the client or by the system. So the template has 2 scenarios:
+Renewal of the application is done at expiry by the background job. When the application is renewed, the client will receive a notification that the application has been renewed.
 
-- Client renewal `client_app_renewal_success` (When the client renews the application)
 - System renewal `client_app_wiq_renewal_success` (When the system renews the application)
 
 4. Upgrade
@@ -312,7 +311,7 @@ notification that the application has been upgraded.
 
 When a client purchases a downgrade for an application, the client will receive a notification that the purchase for the downgrade has been successful. For `duration_based` applications, the client will receive a notification that the application has been scheduled for a downgrade. Since there is a difference in the downgrade process for `duration_based` applications, the template has 2 scenarios:
 
-- Downgrade scheduled `client_app_downgrade_scheduled`
+- Downgrade initiated `client_app_downgrade_initiated`
 - Downgrade successful `client_app_downgrade_success`
 
 # Default notifications
