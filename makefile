@@ -10,7 +10,7 @@ task:
 
 save:
 	git add .
-	git commit -m $(MESSAGE)
+	git commit -m "$(MESSAGE)"
 	git push origin $(PROJECT)
 
 1128:
