@@ -46,16 +46,10 @@ switch-main:
 	git stash push -m $(BRANCH)
 	git checkout main
 
-wiq-1128:
-	git checkout -b wiq-1128
-
 switch-wiq-1128:
 	git add .
 	git stash push -m $(BRANCH)
 	git checkout wiq-1128
-
-wiq-1090:
-	git checkout -b wiq-1090
 
 switch-wiq-1090:
 	git add .
