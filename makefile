@@ -15,10 +15,16 @@ today:
 task:
 	code $(BRANCH)/$(BRANCH).md
 
-save:
+commit:
 	git add .
 	git commit -m "$(MESSAGE)"
+
+push:
 	git push origin $(BRANCH)
+
+stash:
+	git add .
+	git stash push -m $(BRANCH)
 
 switch-wiq-1128:
 	git add .
