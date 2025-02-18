@@ -1,13 +1,13 @@
 - [ ] App store revamp changes
   - [ ] Database migrations removing the unnecessary columns
-  - [ ] Notifications Engine
-    - [ ] Template naming needs to be standardized
-    - [ ] Fixing the notification configuration
-    - [ ] Updating the templates according to the relevant scenario
-      - [ ] Show amount with GST in the email
+  - [x] Notifications Engine
+    - [x] Template naming needs to be standardized
+    - [x] Fixing the notification configuration
+    - [x] Updating the templates according to the relevant scenario
+      - [x] Show amount with GST in the email
     - [x] Skip deduction for default messages
   - [ ] Code cleanup
-  - [ ] Endpoint updates `apps/` to `apps/master`
+  - [x] Endpoint updates `apps/` to `apps/master`
   - [ ] Move the config used by `shipping_badges` app to a dedicated file
 - [ ] Shipping app changes
   - [ ] Database migrations
