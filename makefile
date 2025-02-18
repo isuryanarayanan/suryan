@@ -16,4 +16,4 @@ save:
 1128:
 	git stash push -m $(PROJECT)
 	git checkout wareiq-app/wq-1128
-	git stash pop stash^{/wareiq-app/wq-1128}
+	git stash pop stash^{1128}
