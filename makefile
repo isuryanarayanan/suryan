@@ -11,7 +11,6 @@ me:
 	@echo "message: $(MESSAGE)"
 	@echo "branch: $(BRANCH)"
 	@echo "today: $(TODAY)"
-	@echo "stash: $(git stash list | grep 'On $(BRANCH)'' | head -n 1 | awk -F: '{print $$1}')"
 	@echo "================================="
 
 today:
@@ -46,7 +45,7 @@ stash:
 	git stash push -m $(BRANCH)
 
 pop:
-	git stash pop $$(git stash list | grep "On $(BRANCH)" | head -n 1 | awk -F: '{print $$1}')
+	git stash list | grep "On $(BRANCH)" | head -n 1 | awk -F: '{print $$1}' | xargs -I {} git stash pop {}
 
 
 # Work
