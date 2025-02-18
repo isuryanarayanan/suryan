@@ -16,7 +16,7 @@ save:
 	git commit -m "$(MESSAGE)"
 	git push origin $(PROJECT)
 
-1128:
+switch-1128:
 	git add .
 	git stash push -m $(PROJECT)
 	git checkout wareiq-app/wq-1128
