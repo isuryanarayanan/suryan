@@ -1,3 +1,6 @@
+MESSAGE ?= "Default update message"
+PROJECT_NAME ?= "wareiq-app"
+PROJECT_TICKET ?= "wq-1090"
 
 me:
 	code makefile
@@ -5,7 +8,7 @@ me:
 task:
 	code wareiq-app/wq-1090/tasks.md
 
-push:
+save:
 	git add .
-	git commit -m "update"
-	git push origin wareiq-app/wq-1090
+	git commit -m $(MESSAGE)
+	git push origin "$(PROJECT_NAME)/$(PROJECT_TICKET)"
