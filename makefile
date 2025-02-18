@@ -37,4 +37,4 @@ switch-wiq-1090:
 	git checkout wiq-1090
 
 pop:
-	git stash pop stash@{$(BRANCH)}
+	@git stash pop $$(git stash list | grep "On $(BRANCH)" | head -n 1 | awk -F: '{print $$1}')
