@@ -21,6 +21,18 @@ task:
 
 # Git
 
+see:
+	@echo "================================="
+	git status
+	@echo "================================="
+	git stash list
+	@echo "================================="
+
+save:
+	git add .
+	git commit -m "$(MESSAGE)"
+	git push origin $(BRANCH)
+
 commit:
 	git add .
 	git commit -m "$(MESSAGE)"
@@ -38,8 +50,6 @@ pop:
 
 # Work
 
-main:
-	git checkout main
 
 switch-main:
 	git add .
