@@ -11,6 +11,7 @@ me:
 	@echo "message: $(MESSAGE)"
 	@echo "branch: $(BRANCH)"
 	@echo "today: $(TODAY)"
+	@echo "stash: $(git stash list | grep 'On $(BRANCH)'' | head -n 1 | awk -F: '{print $$1}')"
 	@echo "================================="
 
 today:
