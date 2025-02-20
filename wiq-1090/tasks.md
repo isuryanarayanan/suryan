@@ -7,20 +7,8 @@
       - [x] Show amount with GST in the email
     - [x] Skip deduction for default messages
   - [ ] Code cleanup
-    - [ ] Recheck the PR line by line.
-    - [ ] Apps apis
-      - [ ] Branded tracking
-      - [ ] Shipping badges
-        - [x] Create the apis which is required by the shipping badges application to work inside the application specific file.
-      - [ ] WareIQ interact
-    - [ ] App store management
-      - [ ] Activate
-      - [ ] Deactivate
-      - [ ] Upgrade
-      - [ ] Downgrade Initiate
-      - [ ] Downgrade
-      - [ ] Expire
-      - [ ] Renew
+  - [x] Endpoint updates `apps/` to `apps/master`
+  - [ ] Move the config used by `shipping_badges` app to a dedicated file
 - [ ] Shipping app changes
   - [ ] Database migrations
     - [ ] Application Costs Sub Ledger table
@@ -325,3 +313,5 @@ When a client purchases a downgrade for an application, the client will receive 
 
 - Downgrade initiated `client_app_downgrade_initiated`
 - Downgrade successful `client_app_downgrade_success`
+
+

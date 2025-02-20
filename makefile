@@ -2,6 +2,8 @@
 
 MESSAGE ?= "default"
 TODAY := $(shell date +'%d-%m-%Y')
+YESTERDAY := $(shell date -v-1d +'%d-%m-%Y')
+TOMORROW := $(shell date -v+1d +'%d-%m-%Y')
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
 # Daily
@@ -15,6 +17,12 @@ me:
 
 today:
 	code journal/$(TODAY).md
+
+yesterday:
+	code journal/$(YESTERDAY).md
+
+tomorrow:
+	code journal/$(TOMORROW).md
 
 task:
 	code $(BRANCH)/$(BRANCH).md
