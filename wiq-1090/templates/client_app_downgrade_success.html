@@ -334,11 +334,23 @@
                       <p>Renewal Date : {{app.renewal_date}}</p>
                       {{#if app.limit_units }}
                       <p>Limits : {{app.limit}} {{app.limit_units}}</p>
+                      
+                        {{/if}}
+                      </p>
+
+                      <p
+                        style="
+                          font-size: 14px;
+                          font-weight: 500;
+                          margin-top: 30px;
+                        "
+                      >
+                        Deduction Details
+                      </p>
                       <p>
                         Total amount deducted : {{app.subscription_charge_gst}}
                       </p>
-                        {{/if}}
-                      </p>
+                      <p>Subscription Charges : {{app.subscription_charge}}</p>
                     </td>
                   </tr>
                 </table>

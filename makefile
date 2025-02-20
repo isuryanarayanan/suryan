@@ -27,6 +27,10 @@ tomorrow:
 task:
 	code $(BRANCH)/$(BRANCH).md
 
+script:
+	code $(BRANCH)/__init__.py
+	python $(BRANCH)/__init__.py
+
 # Git
 
 see:
