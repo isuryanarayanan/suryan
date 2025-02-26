@@ -18,7 +18,13 @@ me:
 
 .PHONY: diet
 diet:
-	if [ ! -f diet/$(TODAY).md ]; then cp diet/diet.md diet/$(TODAY).md; fi
+	if [ ! -f diet/$(TODAY).md ]; then \
+		if [ -f diet/$(YESTERDAY).md ]; then \
+			cp diet/$(YESTERDAY).md diet/$(TODAY).md; \
+		else \
+			cp diet.md diet/$(TODAY).md; \
+		fi \
+	fi
 	code diet/$(TODAY).md
 
 todo:
