@@ -2,6 +2,8 @@
 
 MESSAGE ?= "default"
 TODAY := $(shell date +'%d-%m-%Y')
+YESTERDAY := $(shell date -v-1d +'%d-%m-%Y')
+TOMORROW := $(shell date -v+1d +'%d-%m-%Y')
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
 # Daily
@@ -13,11 +15,36 @@ me:
 	@echo "today: $(TODAY)"
 	@echo "================================="
 
+
+.PHONY: diet
+diet:
+	if [ ! -f diet/$(TODAY).md ]; then \
+		if [ -f diet/$(YESTERDAY).md ]; then \
+			cp diet/$(YESTERDAY).md diet/$(TODAY).md; \
+		else \
+			cp diet.md diet/$(TODAY).md; \
+		fi \
+	fi
+	code diet/$(TODAY).md
+
+todo:
+	code todo.md
+
 today:
 	code journal/$(TODAY).md
 
+yesterday:
+	code journal/$(YESTERDAY).md
+
+tomorrow:
+	code journal/$(TOMORROW).md
+
 task:
 	code $(BRANCH)/$(BRANCH).md
+
+script:
+	code $(BRANCH)/__init__.py
+	python $(BRANCH)/__init__.py
 
 # Git
 

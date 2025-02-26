@@ -1,5 +1,4 @@
 .DS_Store
-__init__.py
 __pycache__/
 application_downgrade.html
 billing.md
@@ -14,3 +13,4 @@ share/
 sql/
 temp/
 journal/
+diet/
