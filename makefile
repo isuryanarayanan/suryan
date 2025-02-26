@@ -15,6 +15,15 @@ me:
 	@echo "today: $(TODAY)"
 	@echo "================================="
 
+
+.PHONY: diet
+diet:
+	if [ ! -f diet/$(TODAY).md ]; then cp diet/diet.md diet/$(TODAY).md; fi
+	code diet/$(TODAY).md
+
+todo:
+	code todo.md
+
 today:
 	code journal/$(TODAY).md
 
