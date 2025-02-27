@@ -22,13 +22,21 @@ diet:
 		if [ -f diet/$(YESTERDAY).md ]; then \
 			cp diet/$(YESTERDAY).md diet/$(TODAY).md; \
 		else \
-			cp diet.md diet/$(TODAY).md; \
+			cp diet/diet.md diet/$(TODAY).md; \
 		fi \
 	fi
 	code diet/$(TODAY).md
 
+.PHONY: todo
 todo:
-	code todo.md
+	if [ ! -f todo/$(TODAY).md ]; then \
+		if [ -f todo/$(YESTERDAY).md ]; then \
+			cp todo/$(YESTERDAY).md todo/$(TODAY).md; \
+		else \
+			cp todo/todo.md todo/$(TODAY).md; \
+		fi \
+	fi
+	code todo/$(TODAY).md
 
 today:
 	code journal/$(TODAY).md
