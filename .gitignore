@@ -10,7 +10,6 @@ include/
 lib/
 pyvenv.cfg
 share/
-sql/
 temp/
 journal/
 diet/
