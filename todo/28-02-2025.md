@@ -1,0 +1,28 @@
+# Billing
+
+- [ ] Add the billing month when the bill is generated for all the transaction ledger entries
+- [ ] Check why the zones are empty after reconciliation
+
+# App Store
+
+- [ ] Complete the revamp changes
+  - [x] Redo function documentation
+  - [x] Update templates
+  - [x] Update `How-to-build-an-app.md`
+  - [ ] Recheck the PR.
+  - [ ] Testing
+    - [ ] Test the app store flow
+    - [ ] Test app API's
+  - [ ] Generate requirements.txt
+  - [ ] Optimize the API's
+
+# Shipping App
+
+- [ ] Discuss the shipping app flow with the team
+
+# Application Costs Sub Ledger
+
+- [ ] Migrate the changes
+- [ ] Make code changes for adding and updating the sub ledger wherever necessary
+- [ ] Make API's to see the sub ledger
+- [ ] Make the data moving script
