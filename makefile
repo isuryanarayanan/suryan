@@ -17,16 +17,15 @@ me:
 
 # The SQL command will ask for a name and create a .sql file with the snake case of the name
 # Example: "Create User Table" will create create_user_table.sql 
-# Additionally the command will save the file inside the sql folder and inside the TODAY subfolder
+# If the name of the file is already existing the command will open the existing file
 .PHONY: sql
 sql:
 	@read -p "Enter the name of the SQL file: " name; \
 	snake=$$(echo $$name | sed -E 's/ /_/g' | tr '[:upper:]' '[:lower:]'); \
-	if [ ! -d sql/$(TODAY) ]; then \
-		mkdir -p sql/$(TODAY); \
+	if [ ! -f sql/$$snake.sql ]; then \
+		touch sql/$$snake.sql; \
 	fi; \
-	touch sql/$(TODAY)/$$snake.sql; \
-	code sql/$(TODAY)/$$snake.sql
+	code sql/$$snake.sql
 
 
 
